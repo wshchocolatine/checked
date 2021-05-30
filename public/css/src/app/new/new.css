@@ -1,0 +1,110 @@
+* {
+  color: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+  text-decoration: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; }
+
+html {
+  margin: 0;
+  padding: 0; }
+
+#root {
+  margin: 0;
+  padding: 0; }
+
+#container {
+  display: flex;
+  max-width: 100vw;
+  min-height: 100%;
+  padding: 0;
+  margin: 0; }
+
+.menuContainer {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  background-color: #1f1f1f;
+  flex: 0.16; }
+
+.linkMenu, .linkMenuActive, .linkMenu:hover {
+  display: block;
+  padding: 15px;
+  color: #fafafa;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 400ms ease; }
+
+.linkMenu:first-child, .linkMenuActive:first-child {
+  margin-top: calc(1rem + 30px); }
+
+.linkMenuActive, .linkMenu:hover {
+  background-color: #FF4354; }
+
+.appContainer {
+  flex: 0.84;
+  display: flex; }
+
+.formContainer {
+  margin-left: 7%;
+  flex: 0.8;
+  display: flex;
+  flex-direction: column; }
+  .formContainer .heading {
+    font-size: 3.125rem;
+    font-weight: 600;
+    padding-top: 2.5em;
+    padding-bottom: 2.4em;
+    margin: 0; }
+  .formContainer .inputsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .formContainer .inputsContainer .left, .formContainer .inputsContainer .right {
+      width: 40%; }
+      .formContainer .inputsContainer .left input:last-child, .formContainer .inputsContainer .right input:last-child {
+        margin-top: 7.5em; }
+    .formContainer .inputsContainer input {
+      width: 100%;
+      height: 2em;
+      font-size: 1rem;
+      padding: 1.25em 0;
+      outline: none;
+      border: none;
+      border-bottom: 2.2px solid #1f1f1f; }
+  .formContainer .buttonContainer {
+    margin-top: 7.65em;
+    align-self: flex-end;
+    margin-right: 4px;
+    display: flex; }
+    .formContainer .buttonContainer button {
+      font-size: 1rem;
+      padding: 12px 35px;
+      border-radius: 10px;
+      font-weight: 700;
+      background-color: #FF4354;
+      opacity: 0.9;
+      border: solid 1px #FF4354;
+      color: #fafafa;
+      transition: all 400ms ease;
+      cursor: pointer; }
+    .formContainer .buttonContainer button:hover {
+      opacity: 0.7; }
+    .formContainer .buttonContainer .seeSecurity {
+      color: #8b8b8b;
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-right: 1.7em; }
+      .formContainer .buttonContainer .seeSecurity .bold {
+        font-weight: 600; }
+      .formContainer .buttonContainer .seeSecurity .underline {
+        padding-bottom: 0.1em;
+        border-bottom: 1px solid #8b8b8b; }

@@ -1,0 +1,13 @@
+.bold {
+    font-weight: 600;
+}
+@mixin underline($color){
+    padding-bottom: 0.1em;
+    border-bottom: 1px solid $color;
+ }
+@mixin md() {
+    background-color: #f5f5f5;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.875rem;
+    padding: 0.4em 0.4em;
+ }

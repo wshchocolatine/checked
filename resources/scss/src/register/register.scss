@@ -1,0 +1,112 @@
+
+// Import code mixins to allow an uniform design on the website avoiding repeting it for each style sheets (ex => a button)
+
+@import "../../mixins/button.scss";
+@import "../../mixins/input.scss";
+
+
+//root
+
+@import "../../snippets/root.scss";
+
+// Code
+
+@import "../../snippets/classicBody.scss";
+@import "../../snippets/leftRight.scss";
+
+    .left {
+        @include left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .right {
+        @include right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $primaryColor;
+    }
+
+//@LEFT
+
+//Inputs
+
+.name {
+    @include input($greyColor, 45%);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.name::placeholder {
+    @include inputPlaceholder($greyColor)
+}
+
+.mail {
+    @include input($greyColor, 45%);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.mail::placeholder {
+    @include inputPlaceholder($greyColor);
+}
+
+.password {
+    @include input($greyColor, 45%);
+    margin-top: 5%;
+    margin-bottom: 12%;
+}
+.password::placeholder {
+    @include inputPlaceholder($greyColor);
+}
+
+//Button
+
+.buttonContainer {
+    width: 45%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0%;
+}
+
+.buttonSend {
+    margin: 0;
+    @include button($primaryColor);
+}
+.buttonSend:hover {
+    opacity: 0.7;
+}
+
+.seeEngagements {
+    margin-left: 10px;
+    color: $greyColorB;
+    font-weight: 500;
+}
+.engagementsLink {
+    text-decoration: underline;
+}
+
+// Link
+
+.loginLink {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    text-decoration: underline;
+    color: $greyColorB;
+    font-size: 0.9rem;
+}
+
+
+//@RIGHT
+
+.checked {
+    margin-bottom: 5%;
+    color: $whiteColor;
+    font-size: 3rem;
+    font-weight: 600;
+}

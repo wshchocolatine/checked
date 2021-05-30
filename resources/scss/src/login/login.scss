@@ -1,0 +1,86 @@
+
+// Import code mixins to allow an uniform design on the website avoiding repeting it for each style sheets (ex => a button)
+
+@import "../../mixins/button.scss";
+@import "../../mixins/input.scss";
+
+
+//root
+
+@import "../../snippets/root.scss";
+
+// Code
+
+@import "../../snippets/classicBody.scss";
+@import "../../snippets/leftRight.scss";
+
+    .left {
+        @include left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .right {
+        @include right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $primaryColor;
+    }
+
+//@LEFT
+
+//Inputs
+
+.mail {
+    @include input($greyColor, 45%);
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+.mail::placeholder {
+    @include inputPlaceholder($greyColor);
+}
+
+.password {
+    @include input($greyColor, 45%);
+    margin-top: 6%;
+    margin-bottom: 15%;
+}
+.password::placeholder {
+    @include inputPlaceholder($greyColor);
+}
+
+//Button
+
+.buttonSend {
+    @include button($primaryColor);
+    margin-bottom: 1%;
+}
+.buttonSend:hover {
+    opacity: 0.7;
+}
+
+// Link
+
+.registerLink {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    text-decoration: underline;
+    color: $greyColorB;
+    font-size: 0.9rem;
+}
+
+
+//@RIGHT
+
+.checked {
+    margin-bottom: 5%;
+    color: $whiteColor;
+    font-size: 3rem;
+    font-weight: 600;
+}

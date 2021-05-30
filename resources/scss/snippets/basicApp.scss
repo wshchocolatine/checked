@@ -1,0 +1,43 @@
+@import "./root.scss";
+
+#container {
+    display: flex;
+    max-width: 100vw;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.menuContainer {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    background-color: $blackColor;
+    flex: 0.16;
+}
+
+.linkMenu {
+    display: block;
+    padding: 15px;
+    color: $whiteColor;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 400ms ease;
+}
+
+.linkMenu:first-child {
+    margin-top: calc(1rem + 30px);
+}
+
+.linkMenu:hover {
+    @extend .linkMenuActive;
+}
+
+.linkMenuActive {
+    @extend .linkMenu;
+    background-color: $primaryColor;
+}

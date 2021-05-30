@@ -1,20 +1,25 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Password from 'App/Models/Password'
 import Database from '@ioc:Adonis/Lucid/Database'
-const CryptoJS = require('crypto-js')
+import Crypto from 'crypto'
 
 export default class PasswordsController {
     public async Post({request, auth}: HttpContextContract) {
         try {
-            let {service, password, username, mail} = request.only(['service', 'password', 'username', 'mail'])
+            let {service, password, username, email} = request.only(['service', 'password', 'username', 'email'])
+            let passwordHashed = Crypto.publicEncrypt(auth.user!.publicKey, Buffer.from(password)).toString('base64')
+
 
             let payload = {
                 id: parseInt(String(Math.floor(Math.random() * Date.now())).slice(0, 10)),
                 service: service,
-                password: CryptoJS.AES.encrypt(password, auth.user!.publicKey).toString(),
+                password: passwordHashed,
                 username: username,
-                mail: mail
+                email: email,
+                owner: auth.user!.id
             }
+
+            console.log(payload.password)
     
             await Password.create(payload)
             return 200
@@ -29,12 +34,14 @@ export default class PasswordsController {
             let id = auth.user!.id
             let privateKey = session.get('key')
 
-            let passwords = (await Database.from('passwords').where('owner', id)).forEach(element => {
-                //Deciphering them
-                let hex = CryptoJS.AES.decrypt(element.password, privateKey)
-                let password = CryptoJS.enc.Utf8.stringify(hex)
+            let passwords = await Database.from('passwords').where('owner', id)
+            passwords.forEach(element => {
+                //Decipher them
+                let keyBuffer = Buffer.from(privateKey)
+                let passwordBuffer = Buffer.from(element.password, 'base64')
+                let password = Crypto.privateDecrypt(keyBuffer, passwordBuffer).toString()
 
-                //Changing
+                //Send
                 element.password = password
             })
 

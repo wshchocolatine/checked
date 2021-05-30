@@ -1,0 +1,31 @@
+@mixin input($color, $width) {
+    width: $width;
+    color: $color;
+    border: none;
+    border-bottom: 2px solid $color;
+    outline: none;
+    padding: 10px 0px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@mixin inputPlaceholder($color) {
+    font-weight: 600;
+    color: $color;
+}
+
+@mixin inputIndicator() {
+    position: relative;
+    bottom: 1.4px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    z-index: 100;
+    transition: all 400ms ease-in-out;
+}
+
+@mixin inputIndicatorFocus($color) {
+    background-color: $color;
+    width: 100%;
+    left: 0;
+}

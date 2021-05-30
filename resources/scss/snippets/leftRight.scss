@@ -1,0 +1,15 @@
+#container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+@mixin left() {
+    flex: 1;
+    height: 100%;
+}
+
+@mixin right() {
+    flex: 1;
+    height: 100%;
+}

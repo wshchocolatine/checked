@@ -1,4 +1,3 @@
-import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Password extends BaseModel {
@@ -15,5 +14,8 @@ export default class Password extends BaseModel {
   public username: string
 
   @column()
-  public mail: string
+  public email: string
+
+  @column()
+  public owner: number
 }

@@ -156,7 +156,7 @@ Encore.configureDevServerOptions((options) => {
 | favorite CSS precompiler
 |
 */
-// Encore.enableSassLoader()
+Encore.enableSassLoader()
 // Encore.enableLessLoader()
 // Encore.enableStylusLoader()
 
@@ -186,6 +186,15 @@ Encore.configureDevServerOptions((options) => {
 //   runtimeCompilerBuild: false,
 //   useJsx: false
 // })
+
+Encore.configureBabel((babelConfig) => {
+  babelConfig.plugins.push('styled-jsx/babel')
+  babelConfig.presets.push('@babel/preset-flow')
+}, {
+  exclude: /node_modules/
+}) 
+
+Encore.enableReactPreset()
 
 /*
 |--------------------------------------------------------------------------

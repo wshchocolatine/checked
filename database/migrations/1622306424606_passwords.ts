@@ -7,10 +7,10 @@ export default class Passwords extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.float('id', 10)
       table.string('service')
-      table.string('password')
+      table.text('password')
       table.string('username')
-      table.string('mail')
-      table.integer('owner')
+      table.string('email')
+      table.float('owner')
 
       /**
        * Uses timestampz for PostgreSQL and DATETIME2 for MSSQL
