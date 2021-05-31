@@ -39,7 +39,7 @@ function Dashboard() {
     }, [])
 
     const redirectToNew = () => {
-        window.location.href = url
+        window.location.href = '/new'
     }
 
     const redirectToLogin = () => {
