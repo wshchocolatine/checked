@@ -38,8 +38,12 @@ function Dashboard() {
            .catch((e) => console.log(e))
     }, [])
 
-    const redirect = (url) => {
+    const redirectToNew = () => {
         window.location.href = url
+    }
+
+    const redirectToLogin = () => {
+        window.location.href = '/login'
     }
 
     console.log(passwords)
@@ -63,7 +67,7 @@ function Dashboard() {
                             password={password.password}
                             username={password.username} />
                         ))}
-                        <div className="newPass">
+                        <div onClick={redirectToNew} className="newPass">
                             <p>NEW</p>
                         </div>
                     </div>
@@ -83,7 +87,7 @@ function Dashboard() {
   
             <div className="errorContainer">
                 <h2>No Passwords Yet :(</h2>
-                <button>New</button>
+                <button onClick={redirectToNew}>New</button>
             </div>
         </div>
         )
@@ -101,7 +105,7 @@ function Dashboard() {
 
                 <div className="errorContainer">
                     <h2>Unauthorized</h2>
-                    <button>Login</button>
+                    <button onClick={redirectToLogin}>Login</button>
                 </div>
             </div>
         )

@@ -40,6 +40,10 @@ function Register() {
                    window.location.href = '/login'
                }
 
+               else if(response.data === 500) {
+                   alert('Erreur')
+               }
+
                else {
                    alert('Email already took')
                }
