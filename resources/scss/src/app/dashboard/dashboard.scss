@@ -53,8 +53,8 @@
 }
 
 .errorContainer {
-    width: 100%;
     min-height: 90vh;
+    flex: 0.84;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,6 +69,10 @@
 
     button {
         @include button($primaryColor);
+    }
+
+    button:hover {
+        opacity: 0.8;
     }
 }
 

@@ -43,8 +43,8 @@ export default function Account() {
     <div id="container">
         <div className="menuContainer">
             <a href="/dashboard" className="linkMenu">passwords</a>
-            <a href="/new" className="linkMenu linkMenuActive">new</a>
-            <a href="" className="linkMenu">account</a>
+            <a href="/new" className="linkMenu">new</a>
+            <a href="" className="linkMenu linkMenuActive">account</a>
             <a href="/about" className="linkMenu">about</a>
         </div>
 
