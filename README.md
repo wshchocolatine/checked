@@ -57,7 +57,7 @@ React ([https://reactjs.org/](https://fr.reactjs.org/))
 
 Scss ([https://sass-lang.com/](https://sass-lang.com/))
 
-Bcrypt ([https://www.npmjs.com/package/bcrypt](https://www.npmjs.com/package/bcrypt))
+Argon2 ([https://www.npmjs.com/package/phc-argon2](https://www.npmjs.com/package/phc-argon2))
 
 Adonis ([https://adonisjs.com/](https://adonisjs.com/))
 
@@ -65,5 +65,5 @@ Crypto ([https://nodejs.org/api/crypto.html](https://nodejs.org/api/crypto.html)
 
 CryptoJS ([https://cryptojs.gitbook.io/docs/](https://cryptojs.gitbook.io/docs/))
 
-MongoDB ([https://www.npmjs.com/package/mongodb](https://www.npmjs.com/package/mongodb))
+PostgreSQL ([https://www.postgresql.org](https://www.postgresql.org))
 
