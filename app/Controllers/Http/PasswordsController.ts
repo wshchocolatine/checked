@@ -51,4 +51,16 @@ export default class PasswordsController {
             return 500
         }
     }
+
+    public async Delete({request}: HttpContextContract) {
+        try {
+            let id = request.only(['id'])
+            let reponse = await Database.from('passwords').where('id', id).delete()
+
+            return reponse;
+        } catch(e) {
+            console.log(e)
+            return 500
+        }
+    }
 }

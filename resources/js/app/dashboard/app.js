@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Password from './password'
+import PasswordContainer from './password.js'
 
 
 function Dashboard() {
@@ -31,12 +31,16 @@ function Dashboard() {
 
                else{
                    console.log('non')
-                   setEtat(200)
                    setPasswords(response.data)
+                   setEtat(200)
                }
            })
            .catch((e) => console.log(e))
     }, [])
+
+    const redirect = (url) => {
+        window.location.href = url
+    }
 
     console.log(passwords)
 
@@ -51,14 +55,17 @@ function Dashboard() {
                 </div>
     
                     <div className="appContainer">
-                        {passwords.map((password) => {
-                            <Password
-                            ref={password.id}
+                        {passwords.map((password) => (
+                            <PasswordContainer 
+                            key={password.id}
                             service={password.service}
-                            username={password.username}
                             email={password.email}
-                            password={password.password} />
-                        })}
+                            password={password.password}
+                            username={password.username} />
+                        ))}
+                        <div className="newPass">
+                            <p>NEW</p>
+                        </div>
                     </div>
             </div>
         )
@@ -74,7 +81,10 @@ function Dashboard() {
                 <a href="/about" className="linkMenu">about</a>
             </div>
   
-            <h1>No Passwords Yet</h1>
+            <div className="errorContainer">
+                <h2>No Passwords Yet :(</h2>
+                <button>New</button>
+            </div>
         </div>
         )
     }
@@ -89,7 +99,10 @@ function Dashboard() {
                     <a href="/about" className="linkMenu">about</a>
                 </div>
 
-                <h2>Unauthorized</h2>
+                <div className="errorContainer">
+                    <h2>Unauthorized</h2>
+                    <button>Login</button>
+                </div>
             </div>
         )
     }

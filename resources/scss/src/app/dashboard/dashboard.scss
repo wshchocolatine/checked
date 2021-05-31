@@ -7,6 +7,7 @@
 
 @import "../../../snippets/classicBody.scss";
 @import "../../../snippets/basicApp.scss";
+@import "../../../mixins/button.scss";
 
 
 .appContainer {
@@ -50,4 +51,50 @@
         padding: 0px 1em;
     }
 }
+
+.errorContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-weight: bold;
+        font-size: 3rem;
+        margin: 0;
+        padding-bottom: 2em;
+    }
+
+    button {
+        @include button($primaryColor);
+    }
+}
+
+
+.newPass {
+    width: 250px;
+    height: 294.8px;
+    border-radius: 12px;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.95;
+    transition: opacity 400ms ease;
+    cursor: pointer;
+    margin: 2em 2em;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    p {
+        color: #fafafa;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+}
+
 

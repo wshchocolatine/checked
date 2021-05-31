@@ -37,7 +37,7 @@ export default class About extends React.Component {
                     <p>First, we are going to talk about your checked! password. This 
                         password is hashed and stock into DB (database). The library we use to 
                         hash password when you register and to compare passwords when you login
-                        is named Bcrypt. You can check it <a target="_blank" href="https://github.com/kelektiv/node.bcrypt.js#readme">
+                        is named Argon2. You can check it <a target="_blank" href="https://www.npmjs.com/package/phc-argon2">
                         <span className="underline">here</span></a>. <br /> <br /> <br />
                        Then, for the passwords you are entering in checked!, we use ciphering and more 
                         precisely asymetric encryption. It's a genre of encryption where there is two keys :
@@ -91,10 +91,10 @@ export default class About extends React.Component {
                     </p>
                     <h3>Packages</h3>
                     <p>Adonis (https://adonisjs.com/) <br /> 
-                       Bcrypt (https://www.npmjs.com/package/bcrypt/) <br />
+                       Argon2 (https://www.npmjs.com/package/phc-argon2) <br />
                        Crypto (https://nodejs.org/api/crypto.html/) <br />
                        CryptoJS (https://cryptojs.gitbook.io/docs) <br />
-                       MongoDB (https://www.npmjs.com/package/mongodb) <br />
+                       PostegreSQL (https://www.postgresql.org/) <br />
                        React (https://reactjs.org) <br />
                        Scss (https://sass-lang.com)</p>
                 </section>

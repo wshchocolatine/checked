@@ -82,3 +82,46 @@ html {
     outline: none;
     font-size: 0.7rem;
     padding: 0px 1em; }
+
+.errorContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .errorContainer h2 {
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 0;
+    padding-bottom: 2em; }
+  .errorContainer button {
+    font-size: 1rem;
+    padding: 12px 35px;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: #FF4354;
+    opacity: 0.9;
+    border: solid 1px #FF4354;
+    color: #fafafa;
+    transition: all 400ms ease;
+    cursor: pointer; }
+
+.newPass {
+  width: 250px;
+  height: 294.8px;
+  border-radius: 12px;
+  background-color: #FF4354;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.95;
+  transition: opacity 400ms ease;
+  cursor: pointer;
+  margin: 2em 2em; }
+  .newPass:hover {
+    opacity: 0.8; }
+  .newPass p {
+    color: #fafafa;
+    font-size: 2rem;
+    text-transform: uppercase; }

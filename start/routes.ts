@@ -29,11 +29,14 @@ Route.get('logout', 'AuthController.Logout')
 Route.group(() => {
   Route.post('passwords', 'PasswordsController.Post')
   Route.get('passwords', 'PasswordsController.Get')
+  Route.delete('passwords', 'PasswordsController.Delete')
+  Route.get('api/account', 'AppController.Account')
 }).middleware(['auth'])
 
 Route.group(() => {
   Route.on('dashboard').render('dashboard.edge')
   Route.on('new').render('new')
+  Route.on('account').render('account')
 }).middleware(['auth'])
 
 Route.on('about').render('about')

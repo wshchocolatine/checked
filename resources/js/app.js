@@ -13,6 +13,7 @@ import Register from './register/app'
 import About from './app/about/app'
 import Dashboard from './app/dashboard/app'
 import New from './app/new/app'
+import Account from './app/account/app'
 
 function App() {
     return(
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/about"> <About /> </Route>
                 <Route path="/dashboard"> <Dashboard /> </Route>
                 <Route path="/new"> <New /> </Route>
+                <Route path="/account"> <Account /> </Route>
             </Switch>
         </Router>
     )
