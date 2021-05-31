@@ -3,7 +3,6 @@ import User from 'App/Models/User'
 import StoreUserValidator from 'App/Validators/StoreUserValidator'
 
 //Modules
-let uniqid = require('uniqid')
 let crypto = require('crypto')
 const CryptoJS = require('crypto-js')
 
