@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Checked! is a service who keeps your passwords safe. You can check it [here](/). 
+Checked! is a service who keeps your passwords safe. You can check it [here](https://checkedd.herokuapp.com). 
 
 ## Security
 
