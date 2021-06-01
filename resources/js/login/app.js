@@ -53,6 +53,7 @@ function Login() {
     return (
         <div id="container">
             <section className="left">
+                <form>
                 <input
                     className="mail inputs"
                     placeholder="Mail"
@@ -66,6 +67,7 @@ function Login() {
                     onChange={changePassword}
                     value={passwordContent} />
                 <button className="buttonSend" onClick={sendRequest}>Login</button>
+                </form>
                 <a href="/register" className="registerLink">Register</a>
             </section>
             <section className="right">

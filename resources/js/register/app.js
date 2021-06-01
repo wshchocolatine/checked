@@ -55,30 +55,32 @@ function Register() {
     return (
         <div id="container">
             <section className="left">
-                <input
-                    className="name inputs"
-                    placeholder="Name"
-                    type="text"
-                    onChange={changeName}
-                    value={name} />
-                <input
-                    className="mail inputs"
-                    placeholder="Mail"
-                    type="email"
-                    onChange={changeMail}
-                    value={mail} />
-                <input
-                    className="password inputs"
-                    placeholder="Mot de Passe"
-                    type="password"
-                    onChange={changePassword}
-                    value={password} />
-                <div className="inputIndicator"></div>
-                <div className="buttonContainer">
-                    <button className="buttonSend" onClick={sendRequest}>S'Inscrire</button>
-                    <p className="seeEngagements">See our <a className="engagementsLink" href="/about#engagements">
-                        engagements</a>.</p>
-                </div>
+                <form>
+                    <input
+                        className="name inputs"
+                        placeholder="Name"
+                        type="text"
+                        onChange={changeName}
+                        value={name} />
+                    <input
+                        className="mail inputs"
+                        placeholder="Mail"
+                        type="email"
+                        onChange={changeMail}
+                        value={mail} />
+                    <input
+                        className="password inputs"
+                        placeholder="Mot de Passe"
+                        type="password"
+                        onChange={changePassword}
+                        value={password} />
+                    <div className="inputIndicator"></div>
+                    <div className="buttonContainer">
+                        <button className="buttonSend" onClick={sendRequest}>S'Inscrire</button>
+                        <p className="seeEngagements">See our <a className="engagementsLink" href="/about#engagements">
+                            engagements</a>.</p>
+                    </div>
+                </form>
                 <a href="/login" className="loginLink">Se Connecter</a>
             </section>
             <section className="right">
