@@ -43,3 +43,5 @@ Route.on('about').render('about')
 
 Route.on('login').render('login')
 Route.on('register').render('register')
+
+Route.on('*').render('404')
