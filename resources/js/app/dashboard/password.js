@@ -2,13 +2,13 @@ import axios from 'axios'
 import React, {forwardRef} from 'react'
 
 const PasswordContainer = forwardRef(
-    ({service, email, password, username}, ref) => {
+    ({service, email, password, username,id}, ref) => {
         
         const delet = (e) => {
             e.preventDefault()
-            let id = e.target.parentNode.dataset.id
+            let messageId = e.target.parentNode.dataset.id
             let data = new FormData()
-            data.append('id', id)
+            data.append('id', messageId)
 
             let config = {
                 method: 'delete',
@@ -32,11 +32,12 @@ const PasswordContainer = forwardRef(
         }
 
         return (
-            <div className="passContainer" ref={ref} data-id={ref}>
+            <div className="passContainer" ref={ref} data-id={id}>
                 <h1>{service}</h1>
                 <input className="name" readOnly value={username} type="text" />
                 <input className="mail" readOnly value={email} type="text" />
                 <input className="password" readOnly value={password} type="text" /> 
+                <img src="/trashIcon.svg" alt="" className="trashIcon" onClick={delet}></img>
             </div>
         )
     }

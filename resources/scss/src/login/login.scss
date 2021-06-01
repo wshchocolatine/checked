@@ -54,6 +54,13 @@
     @include inputPlaceholder($greyColor);
 }
 
+.error {
+    border-bottom: 2px solid rgb(255, 73, 73) !important;
+}
+.error::placeholder {
+    color:rgb(255, 73, 73) !important;
+}
+
 //Button
 
 .buttonSend {

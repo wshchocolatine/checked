@@ -92,7 +92,7 @@ html {
       font-weight: 700;
       background-color: #FF4354;
       opacity: 0.9;
-      border: solid 1px #FF4354;
+      border: none;
       color: #fafafa;
       transition: all 400ms ease;
       cursor: pointer; }

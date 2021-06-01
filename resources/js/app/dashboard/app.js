@@ -16,7 +16,6 @@ function Dashboard() {
         axios(config)
            .then((response) => {
                if(typeof response.data === Number) {
-                   console.log('ghj')
                    setEtat(response.data)
                    return;
                }
@@ -30,7 +29,6 @@ function Dashboard() {
                }
 
                else{
-                   console.log('non')
                    setPasswords(response.data)
                    setEtat(200)
                }
@@ -46,8 +44,6 @@ function Dashboard() {
         window.location.href = '/login'
     }
 
-    console.log(passwords)
-
     if(etat === 200) {
         return (
             <div id="container">
@@ -62,6 +58,7 @@ function Dashboard() {
                         {passwords.map((password) => (
                             <PasswordContainer 
                             key={password.id}
+                            id={password.id}
                             service={password.service}
                             email={password.email}
                             password={password.password}

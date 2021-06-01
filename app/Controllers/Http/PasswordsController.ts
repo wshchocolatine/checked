@@ -18,8 +18,6 @@ export default class PasswordsController {
                 email: email,
                 owner: auth.user!.id
             }
-
-            console.log(payload.password)
     
             await Password.create(payload)
             return 200
@@ -54,11 +52,10 @@ export default class PasswordsController {
 
     public async Delete({request}: HttpContextContract) {
         try {
-            let id = request.only(['id'])
-            // @ts-ignore
-            let reponse = await Database.from('passwords').where('id', id).delete()
+            let {id} = request.only(['id'])
+            await Database.from('passwords').where('id', id).delete()
 
-            return reponse;
+            return 200;
         } catch(e) {
             console.log(e)
             return 500

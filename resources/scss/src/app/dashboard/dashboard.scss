@@ -12,6 +12,8 @@
 
 .appContainer {
     padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
     flex: 0.84;
     display: flex;
     justify-content: flex-start;
@@ -50,6 +52,12 @@
         font-size: 0.7rem;
         padding: 0px 1em;
     }
+
+    .trashIcon {
+        max-height: 38px;
+        max-width: 38px;
+        cursor: pointer;
+    }
 }
 
 .errorContainer {
@@ -64,11 +72,12 @@
         font-weight: bold;
         font-size: 3rem;
         margin: 0;
-        padding-bottom: 2em;
+        padding-bottom: 1.3em;
     }
 
     button {
         @include button($primaryColor);
+        transform: scale(1.3);    
     }
 
     button:hover {

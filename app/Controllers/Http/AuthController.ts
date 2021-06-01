@@ -37,7 +37,6 @@ export default class AuthController {
 
             return 200     
         } catch(e) {
-            console.log(e)
             return 500
         }
     }
@@ -55,8 +54,12 @@ export default class AuthController {
         return 200
     }
 
-    public async Logout({ auth }: HttpContextContract): Promise<string | void> {
-        await auth.logout()
-        return 'carré'
+    public async Logout({ auth }: HttpContextContract): Promise<number | void> {
+        try {
+            await auth.logout()
+            return 200
+        } catch(e) {
+            return 500
+        }
     }
 }
