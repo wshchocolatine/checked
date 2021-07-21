@@ -7,7 +7,7 @@ let crypto = require('crypto')
 const CryptoJS = require('crypto-js')
 
 export default class AuthController {
-    public async Register({ request, auth }: HttpContextContract): Promise<string | number | void> {
+    public async Register({ request, auth }: HttpContextContract): Promise<number> {
         try {
             //Validate request body
             let { username, email, password } = await request.validate(StoreUserValidator)
